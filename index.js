@@ -7,7 +7,7 @@ app.get('/ping', (req, res)=>{
     res.json({"pong":true})
 })
 
-const port = 5200;
+const port = process.env.PORT || 5200;
 app.listen(port, ()=>{
     console.log(`Server is listening on port ${port}`)
 })
